@@ -8,7 +8,7 @@ void print_alphabet_x10(void)
 {
 	int n, nu;
 
-	co = 0;
+	nu = 0;
 
 	while (nu < 10)
 	{
