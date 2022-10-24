@@ -1,6 +1,4 @@
 #include "main.h"
-#include "stdio.h"
-
 /**
  * _puts - it is a function that prints a string
  * @str: var char
@@ -10,7 +8,7 @@ void _puts(char *str)
 {
 	while (*str != '\0')
 	{
-		printf(*str++);
+		_putchar(*str++);
 	}
-	printf("\n");
+	_putchar("\n");
 }
