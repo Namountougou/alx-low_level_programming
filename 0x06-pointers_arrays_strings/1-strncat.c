@@ -1,27 +1,27 @@
-#include "main.h"
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * _strncat - function that concatenates two strings
- * @dest: parmater for dest to append to
- * @src: parameter for src
- * @n: parameter for n
+ * _strncat - concatenate strings, defining the size of second string.
+ * @dest: string with concatenation
+ * @src: string to be concatenated
+ * @n: size of second string
  * Return: Always 0.
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int a = 0;
-	int b = 0;
+	int lengthD, lengthS;
 
-	while (src[a] != '\0')
-		a++;
-	while (dest[b] != '\0' && b < n)
+	lengthD = 0;
+	lengthS = 0;
+
+	while (*(dest + lengthD) != '\0')
+		lengthD++;
+
+	while (*(src + lengthS) != '\0' && lengthD < 97 && lengthS < n)
 	{
-		dest[b] = src[a];
-		a++;
-		b++;
+		*(dest + lengthD) = *(src + lengthS);
+		lengthD++;
+		lengthS++;
 	}
-	src[a] = '\0';
-
+	*(dest + lengthD) = '\0';
 	return (dest);
 }
